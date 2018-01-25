@@ -11,6 +11,18 @@ html {
   --raspberry: #b22746;
 }
 
+.heighlight-e-green {
+  color: var(--green);
+}
+
+.heighlight-e-red {
+  color: var(--raspberry);
+}
+
+.heighlight-e-blue {
+  color: var(--blue);
+}
+
 .slide-0__content {
   display: flex;
   flex-flow: column;
@@ -19,7 +31,8 @@ html {
 
 .slide-0-grid,
 .slide-1-grid,
-.slide-2-grid {
+.slide-2-grid,
+.slide-3-grid {
   display: grid;
   width: 100%;
   grid-template-columns: repeat(6, 1fr);
@@ -29,7 +42,9 @@ html {
 }
 
 .slide-0-grid .cell,
-.slide-1-grid .cell {
+.slide-1-grid .cell,
+.slide-2-grid .cell,
+.slide-3-grid .cell {
   min-height: 15vh;
   background-color: rgba(100, 100, 100, 0.2);
 }
@@ -124,7 +139,8 @@ html {
   grid-column: span 2;
 }
 
-.slide-2__wrapper {
+.slide-2__wrapper,
+.slide-3__wrapper {
   position: absolute;
   display: flex;
   flex-flow: column;
@@ -132,80 +148,14 @@ html {
   top: 2rem;
 }
 
-
-
-.slide-2__2__header,
-.slide-2__1__header,
-.slide-2__3__header,
-.slide-2__4__header,
-.slide-2__5__header,
-.slide-3__header {
-  color: var(--blue) !important;
+.slide-3-grid .cell-1,
+.slide-3-grid .cell-3 {
+  grid-row: span 2;
 }
 
-.slide-2__3__picture {
-  position: relative;
+.slide-3-grid .cell-2,
+.slide-3-grid .cell-8,
+.slide-3-grid .cell-9 {
+  grid-column: span 2;
 }
 
-.slide-2__5__svg {
-  position: absolute;
-  bottom: -7.5rem;
-  right: 9rem;
-  color: var(--raspberry);
-}
-
-.slide-2__5__svg.fragment {
-  transform: scale(10);
-  width: 10rem;
-}
-
-.slide-2__5__svg.fragment.current-fragment {
-  transform: scale(1) rotateZ(-30deg);
-}
-
-.slide-2__5__svg.fragment.visible {
-  transform: scale(1) rotateZ(-30deg);
-}
-
-.heighlight-e-green {
-  color: var(--green);
-}
-
-.heighlight-e-red {
-  color: var(--raspberry);
-}
-
-.heighlight-e-blue {
-  color: var(--blue);
-}
-
-.default-background {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background-color: var(--gray);
-  z-index: -1;
-  transform: scale(2);
-  transition: opacity 500ms linear !important;
-}
-
-.slide-5 p {
-  text-align: left !important;
-}
-
-.slide-12 pre {
-  width: 50% !important;
-}
-
-.slide-16 a {
-  display: block !important;
-  color: var(--white) !important;
-  text-align: left !important;
-  padding: 0 10rem;
-}
-
-.slide-16 a:hover {
-  text-decoration: underline !important;
-}
