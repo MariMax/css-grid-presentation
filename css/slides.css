@@ -29,6 +29,7 @@ html {
   align-items: center;
 }
 
+.slide-11-grid,
 .slide-6-grid,
 .slide-5-grid,
 .slide-4-grid,
@@ -42,8 +43,10 @@ html {
   grid-template-rows: repeat(3, 1fr);
   grid-gap: 1rem;
   position: relative;
+  min-height: 35rem;
 }
 
+.slide-11-grid .cell,
 .slide-6-grid .cell,
 .slide-5-grid .cell,
 .slide-4-grid .cell,
@@ -246,5 +249,32 @@ html {
 
 .slide-6-grid .cell-1,
 .slide-6-grid .cell-10 {
+  grid-column: span 2;
+}
+
+.slide-11__wrapper {
+  position: absolute;
+  display: flex;
+  flex-flow: column;
+  top: 2rem;
+  width: 100%;
+}
+
+
+.slide-11-grid .cell-2 {
+  grid-area: 3 / 5 / 2 / 3;
+}
+
+.slide-11-grid .cell-9,
+.slide-11-grid .cell-3 {
+  grid-column: span 4;
+}
+
+.slide-11-grid .cell-7 {
+  display: none;
+}
+
+.slide-11-grid .cell-1,
+.slide-11-grid .cell-10 {
   grid-column: span 2;
 }
