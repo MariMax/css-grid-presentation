@@ -178,7 +178,7 @@ html {
 
 .svg-image {
   width: 100%;
-  max-height: calc(37vh + 2rem);
+  max-height: 30rem;
   margin: auto;
   position: relative;
   top: -2rem;
@@ -196,6 +196,9 @@ html {
   stroke: var(--raspberry);
 }
 
+.slide-4__content{
+  position: relative;
+}
 
 .slide-4-grid .cell-2,
 .slide-4-grid .cell-4,
