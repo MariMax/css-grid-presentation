@@ -30,7 +30,7 @@
 			<!-- ********************************************************************* -->
 			<!-- ***************************** test slide **************************** -->
 			<!-- ********************************************************************* -->
-
+			
 
 			<!-- ********************************************************************* -->
 			<!-- ***************************** slide 0 ******************************* -->
@@ -138,13 +138,11 @@
 							<p class="fragment fade-in">
 								<span class="heighlight-e-blue">1.</span> Hystory of CSS layout systems</p>
 							<p class="fragment fade-in">
-								<span class="heighlight-e-blue">2.</span> Terminalogy</p>
+								<span class="heighlight-e-blue">2.</span> Terminology</p>
 							<p class="fragment fade-in">
-								<span class="heighlight-e-blue">3.</span> CSS properties</p>
+								<span class="heighlight-e-blue">3.</span> Hands on</p>
 							<p class="fragment fade-in">
-								<span class="heighlight-e-blue">4.</span> Demo</p>
-							<p class="fragment fade-in">
-								<span class="heighlight-e-blue">5.</span> Questions</p>
+								<span class="heighlight-e-blue">4.</span> Questions</p>
 						</div>
 					</div>
 				</div>
@@ -543,7 +541,7 @@
 					</div>
 					<aside class="notes">
 						The space between rows and columns in a grid. Grid container - The container that
-						holds the entire CSS grid. It will be the element that has thedisplay: grid
+						holds the entire CSS grid. It will be the element that has the display: grid
 						or display: inline-grid property on it. Grid item - Any element that is a direct
 						child of a grid container.
 					</aside>
@@ -578,6 +576,9 @@
 							<a href="https://codepen.io">CodePen</a>.</p>
 						<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
 					</div>
+					<aside class="notes">
+						here you can see the most basic example of grid, it consists of one container element and 4 grid items
+					</aside>
 			</section>
 
 			<!-- ********************************************************************* -->
@@ -618,6 +619,7 @@
 							 stroke="#000000" fill="none" />
 						</svg>
 						<aside class="notes">
+							lets try to make something just a little bit more complex, we will make this layout with help of grids
 							.container { display: grid; grid-template-columns: 200px 1fr; grid-template-rows:
 							50px 1fr 50px; width: 100%; height: 90%; grid-gap: .5rem; } .header, .footer
 							{ grid-column-start: 1; grid-column-end: -1; }
@@ -669,6 +671,12 @@
 					</div>
 				</div>
 				<aside class="notes">
+					<div>		fractions: you've aready seen how they work, but to be more precise wi will check on the example a little but later
+						</div>
+						<div>repeat, we all lazy and dont like to write the same thing many times, so repeat for the rescue</div>
+						<div>minmax allows columns to ajust their size</div>
+						<div>all three of these can halp us adjust column size to the content</div>
+						<div>two of these will help us when we don't sure how many coluns we want on the page, lets do some coding</div>
 					<div> 1) .container { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%;
 						height: 90%; }</div>
 					<div>2) .container { display: grid; grid-template-columns: repeat(12, 1fr); width:
@@ -697,6 +705,51 @@
 			<!-- ***************************** slide 8 ******************************* -->
 			<!-- ********************************************************************* -->
 
+			<section class="slide-3">
+				<div class="slide-3__content">
+					<div class="slide-3-grid">
+						<div class="cell cell-1"></div>
+						<div class="cell cell-2"></div>
+						<div class="cell cell-3"></div>
+						<div class="cell cell-4"></div>
+						<div class="cell cell-5"></div>
+						<div class="cell cell-6"></div>
+						<div class="cell cell-7"></div>
+						<div class="cell cell-8"></div>
+						<div class="cell cell-9"></div>
+						<div class="cell cell-10"></div>
+						<div class="cell cell-11"></div>
+						<div class="cell cell-12"></div>
+						<div class="cell cell-13"></div>
+					</div>
+					<div class="slide-3__wrapper">
+						<h4>Alignment
+							<a href="https://codepen.io/MariMax/pen/LQZJzw?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<div style="text-align: left">
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">1.</span> justify-content</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">2.</span> align-content</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">3.</span> justify-items</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">4.</span> align-items</p>
+						</div>
+					</div>
+				</div>
+				<aside class="notes">
+
+				</aside>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 9 ******************************* -->
+			<!-- ********************************************************************* -->
 			<section class="slide-4">
 				<div class="slide-4__content">
 					<div class="slide-4-grid">
@@ -721,21 +774,20 @@
 						</h4>
 						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
 						 viewBox="85 85 370 450">
-							<rect class="blue-rect" height="30" width="350" y="100" x="100" stroke-width="5"
+							<rect class="blue-rect" height="430" width="30" y="100" x="100" stroke-width="5"
 							 stroke="#000000" fill="none" />
-							<rect class="blue-rect" height="350" width="100" y="140" x="100" stroke-width="5"
+							<rect class="blue-rect" height="430" width="100" y="100" x="140" stroke-width="5"
 							 stroke="#000000" fill="none" />
-							<rect class="blue-rect" height="30" width="350" y="500" x="100" stroke-width="5"
+							<rect class="blue-rect" height="30" width="200" y="100" x="250" stroke-width="5"
 							 stroke="#000000" fill="none" />
-							<rect class="blue-rect" height="200" width="240" y="140" x="210" stroke-width="5"
+							<rect class="blue-rect" height="350" width="200" y="140" x="250" stroke-width="5"
 							 stroke="#000000" fill="none" />
-							<rect class="blue-rect" height="140" width="115" y="350" x="210" stroke-width="5"
-							 stroke="#000000" fill="none" />
-							<rect class="blue-rect" height="140" width="115" y="350" x="335" stroke-width="5"
+							<rect class="blue-rect" height="30" width="200" y="500" x="250" stroke-width="5"
 							 stroke="#000000" fill="none" />
 						</svg>
 					</div>
 					<aside class="notes">
+						<div>I think it's time for one more example, and probably the most amazing feature of the grids</div>
 						<div>
 							.container { width: 100%; height: 90%; display: grid; grid-tepmlate-columns: repeat(3,
 							1fr); grid-template-areas: 'h h h' 'lp ct ct' 'lp ct ct' 'lp cbl cbr' 'f f
@@ -748,9 +800,6 @@
 
 			</section>
 
-			<!-- ********************************************************************* -->
-			<!-- ***************************** slide 9 ******************************* -->
-			<!-- ********************************************************************* -->
 
 			<!-- ********************************************************************* -->
 			<!-- ***************************** slide 10 ****************************** -->
