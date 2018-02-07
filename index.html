@@ -1,0 +1,999 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Css Grid Layout</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/black.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="css/slides.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<!-- ********************************************************************* -->
+			<!-- ***************************** test slide **************************** -->
+			<!-- ********************************************************************* -->
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 0 ******************************* -->
+			<!-- ********************************************************************* -->
+			<section class="slide-0">
+				<div class="slide-0__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell wide tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+
+						<div class="slide-0__wrapper">
+							<h4>Css Grid Layout</h1>
+								<p class="slide-0__name">
+									<small>
+										<a href="https://github.com/marimax">Maxim Milovanov</a>
+									</small>
+								</p>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 1 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-1">
+				<div class="slide-1__content">
+
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-1__wrapper">
+						<div class="sl-block slide-1__picture" data-block-type="image">
+							<div class="sl-block-content slide-1__picture__wrapper">
+								<img data-natural-width="1016" data-natural-height="1012" style="" data-lazy-loaded=""
+								 data-src="https://s3.amazonaws.com/media-p.slid.es/uploads/605314/images/4191400/IMG_20170914_123740.jpg">
+							</div>
+						</div>
+						<div class="slide-1__text__wrapper">
+							<div class="sl-block slide-1__name" data-block-type="text">
+								<div class="sl-block-content">
+									<p>Maxim Milovanov</p>
+								</div>
+							</div>
+
+							<div class="sl-block slide-1__text" data-block-type="text">
+								<div class="sl-block-content">
+									<p>UI developer with some experience in Software engineering.</p>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 2 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-2">
+				<div class="slide-2__content">
+					<div class="grid">
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+					</div>
+					<div class="slide-2__wrapper">
+						<h4>Agenda</h4>
+						<div style="text-align: left">
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">1.</span> Hystory of CSS layout systems</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">2.</span> Terminology</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">3.</span> Hands on</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">4.</span> Questions</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 3 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-3">
+				<div class="slide-3__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell tall wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+					</div>
+					<div class="slide-3__wrapper">
+						<h4>CSS layouts history</h4>
+						<div style="text-align: left">
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">1.</span> Table layout</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">2.</span> Float</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">3.</span> CSS Frameworks</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">4.</span> Flexbox</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">5.</span> CSS Grid</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 3 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-11">
+				<div class="slide-11__content">
+					<div class="grid">
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+					</div>
+					<div class="slide-11__wrapper">
+						<h4>Browsers support
+							<a href="https://codepen.io/MariMax/pen/zRKWaz" class="small" target="_blank">
+								even IE
+							</a>
+							</h1>
+							<a href="https://caniuse.com/#grid">
+								<img height="440" data-src="img/can_i_use.png" alt="can i use css grid layout img">
+							</a>
+
+					</div>
+			</section>
+
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 4 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-4">
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid lines</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="330" x2="90" y1="90" x1="90"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="330" x2="210" y1="90" x1="210"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="330" x2="330" y1="90" x1="330"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="330" x2="450" y1="90" x1="450"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="90" x2="452.5" y1="90" x1="87.5"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="210" x2="450" y1="210" x1="90"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+							<line class="fragment fade-in" stroke="#000000" y2="330" x2="452.5" y1="330" x1="87.5"
+							 stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="5"
+							 fill="none" />
+
+						</svg>
+					</div>
+
+					<aside class="notes">
+						The vertical and horizontal lines that divide the grid and separate the columns and
+						rows. first line right before grid container, last line right after container
+					</aside>
+				</section>
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid cell</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="105" width="105" y="97.5" x="337.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+						</svg>
+					</div>
+					<aside class="notes">
+						A single unit of a CSS grid.
+					</aside>
+				</section>
+
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid area</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="225" width="225" y="97.5" x="217.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+						</svg>
+					</div>
+					<aside class="notes">
+						Rectangular space surrounded by four grid lines. A grid area can contain any number
+						of grid cells.
+					</aside>
+				</section>
+
+
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid track</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="225" width="105" y="97.5" x="217.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+						</svg>
+					</div>
+
+					<aside class="notes">
+						The space between two grid lines. This space can be horizontal or vertical
+					</aside>
+				</section>
+
+
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell tall wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid row</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="105" width="345" y="217.5" x="97.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+						</svg>
+					</div>
+					<aside class="notes">
+						A horizontal track of a grid.
+					</aside>
+				</section>
+
+
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Grid column</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="225" width="105" y="97.5" x="97.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+						</svg>
+					</div>
+					<aside class="notes">
+						A vertical track of a grid.
+					</aside>
+				</section>
+
+
+				<section class="slide-4__content">
+					<div class="grid">
+						<div class="cell wide tall"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">Gutter</h4>
+
+
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 250">
+							<rect class="blue-rect" height="100" width="100" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="100" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="220" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="100" width="100" y="220" x="340" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="area-rect fragment fade-in" height="225" width="15" y="97.5" x="202.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+							<rect class="area-rect fragment fade-in" height="225" width="15" y="97.5" x="322.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+							<rect class="area-rect fragment fade-in" height="15" width="345" y="202.5" x="97.5"
+							 fill-opacity="0.5" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null"
+							 stroke-width="0" stroke="#000000" />
+
+						</svg>
+					</div>
+					<aside class="notes">
+						The space between rows and columns in a grid. Grid container - The container that
+						holds the entire CSS grid. It will be the element that has the display: grid
+						or grid property on it. Grid item - Any element that is a direct child of a
+						grid container.
+					</aside>
+				</section>
+
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 5 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-11">
+				<div class="slide-11__content">
+					<div class="grid">
+						<div class="cell wide tall"></div>
+						<div class="cell tall wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-11__wrapper">
+						<p data-height="525" data-theme-id="dark" data-slug-hash="zROzMZ" data-default-tab="css,result"
+						 data-user="MariMax" data-embed-version="2" data-pen-title="CSS Grid Layout - Basic Grid"
+						 class="codepen">See the Pen
+							<a href="https://codepen.io/MariMax/pen/vdBZeR/">CSS Grid Layout - Basic Grid</a> by Maxim (
+							<a href="https://codepen.io/MariMax">@MariMax</a>) on
+							<a href="https://codepen.io">CodePen</a>.</p>
+						<script async src="https://production-assets.codepen.io/assets/embed/ei.js"></script>
+					</div>
+					<aside class="notes">
+						here you can see the most basic example of grid, it consists of one container element
+						and 4 grid items
+					</aside>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 6 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-4">
+				<div class="slide-4__content">
+					<div class="grid">
+						<div class="cell "></div>
+						<div class="cell wide tall"></div>
+						<div class="cell wide tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">basic layout
+							<a href="https://codepen.io/MariMax/pen/xYxRzv?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 450">
+							<rect class="blue-rect" height="30" width="350" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="350" width="100" y="140" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="30" width="350" y="500" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="350" width="240" y="140" x="210" stroke-width="5"
+							 stroke="#000000" fill="none" />
+						</svg>
+						<aside class="notes">
+							lets try to make something just a little bit more complex, we will make this layout
+							with help of grids .container { display: grid; grid-template-columns: 200px
+							1fr; grid-template-rows: 50px 1fr 50px; width: 100%; height: 90%; grid-gap:
+							.5rem; } .header, .footer { grid-column-start: 1; grid-column-end: -1; }
+						</aside>
+					</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 7 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-3">
+				<div class="slide-3__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+					</div>
+					<div class="slide-3__wrapper">
+						<h4>Size options
+							<a href="https://codepen.io/MariMax/pen/zRYbbB?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<div style="text-align: left">
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">1.</span> fr</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">2.</span> repeat</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">3.</span> minmax</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">4.</span> min-content / max-content / fit-content()</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">5.</span> auto-fit / auto-fill</p>
+						</div>
+					</div>
+				</div>
+				<aside class="notes">
+					<div> fractions: you've aready seen how they work, but to be more precise wi will
+						check on the example a little but later
+					</div>
+					<div>repeat, we all lazy and dont like to write the same thing many times, so repeat
+						for the rescue</div>
+					<div>minmax allows columns to ajust their size</div>
+					<div>all three of these can halp us adjust column size to the content</div>
+					<div>two of these will help us when we don't sure how many coluns we want on the
+						page, lets do some coding</div>
+					<div> 1) .container { display: grid; grid-template-columns: 1fr 1fr 1fr; width: 100%;
+						height: 90%; }</div>
+					<div>2) .container { display: grid; grid-template-columns: repeat(12, 1fr); width:
+						100%; height: 90%; }</div>
+					<div> 3) .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px,
+						1fr)); width: 100%; height: 90%; } </div>
+					<div> 4) .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px,
+						1fr)); width: 100%; height: 90%; } </div>
+					<div> 5) .container { display: grid; grid-template-columns: min-content repeat(3,
+						1fr); width: 100%; height: 90%; } font-size: 1rem;
+					</div>
+					<div> 6) .container { display: grid; grid-template-columns: max-content repeat(3,
+						1fr); width: 100%; height: 90%; } font-size: 1rem;
+					</div>
+					<div> 7) .container { display: grid; grid-template-columns: repeat(auto-fill, minmax(100px,
+						1fr)); width: 100%; height: 90%; }
+					</div>
+					<div> 8) .container { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px,
+						1fr)); width: 100%; height: 90%; }
+					</div>
+
+				</aside>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 8 ******************************* -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-3">
+				<div class="slide-3__content">
+					<div class="grid">
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell wide"></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+					</div>
+					<div class="slide-3__wrapper">
+						<h4>Alignment
+							<a href="https://codepen.io/MariMax/pen/LQZJzw?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<div style="text-align: left">
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">1.</span> justify-content</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">2.</span> align-content</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">3.</span> justify-items</p>
+							<p class="fragment fade-in">
+								<span class="heighlight-e-blue">4.</span> align-items</p>
+						</div>
+					</div>
+				</div>
+				<aside class="notes">
+
+				</aside>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 9 ******************************* -->
+			<!-- ********************************************************************* -->
+			<section class="slide-4">
+				<div class="slide-4__content">
+					<div class="grid">
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+						<div class="cell "></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">template areas
+							<a href="https://codepen.io/MariMax/pen/RQwOJd?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<svg class="svg-image" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg"
+						 viewBox="85 85 370 450">
+							<rect class="blue-rect" height="430" width="30" y="100" x="100" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="430" width="100" y="100" x="140" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="30" width="200" y="100" x="250" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="350" width="200" y="140" x="250" stroke-width="5"
+							 stroke="#000000" fill="none" />
+							<rect class="blue-rect" height="30" width="200" y="500" x="250" stroke-width="5"
+							 stroke="#000000" fill="none" />
+						</svg>
+					</div>
+					<aside class="notes">
+						<div>I think it's time for one more example, and probably the most amazing feature
+							of the grids</div>
+						<div>
+							.container { width: 100%; height: 90%; display: grid; grid-tepmlate-columns: repeat(3,
+							1fr); grid-template-areas: 'h h h' 'lp ct ct' 'lp ct ct' 'lp cbl cbr' 'f f
+							f' }
+						</div>
+						<div>
+							.header { grid-area: h; }
+						</div>
+					</aside>
+
+			</section>
+
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 10 ****************************** -->
+			<!-- ********************************************************************* -->
+			<section class="slide-4">
+				<div class="slide-4__content">
+					<div class="grid">
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+					</div>
+					<div class="slide-4__wrapper">
+						<h4 style="text-align: left">background demo
+							<a href="https://codepen.io/MariMax/pen/KQgxEQ?editors=1100" target="_blank">
+								<svg class="icon icon-share" viewBox="0 0 32 32" width="1em" height="1em" style="position: relative; top: .1em">
+									<path fill="currentColor" d="M8 20c0 0 1.838-6 12-6v6l12-8-12-8v6c-8 0-12 4.99-12 10zM22 24h-18v-12h3.934c0.315-0.372 0.654-0.729 1.015-1.068 1.374-1.287 3.018-2.27 4.879-2.932h-13.827v20h26v-8.395l-4 2.667v1.728z"></path>
+								</svg>
+							</a>
+						</h4>
+						<aside class="notes">
+							you probably noticed, background picture, it's changing and it's made with grid layout,
+							let's try to make something similar
+						</aside>
+					</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 11 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-2">
+				<div class="slide-2__content">
+					<div class="grid">
+						<div class="cell"></div>
+						<div class="cell tall"></div>
+						<div class="cell "></div>
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+					</div>
+					<div class="slide-2__wrapper">
+						<h4>references</h4>
+						<div style="text-align: left">
+							<p class="">
+								<span class="">1.</span>
+								<a href="https://medium.freecodecamp.org/heres-my-free-css-grid-course-merry-christmas-3826dd24f098">Per Harald Borgen</a>
+							</p>
+							<p class="">
+								<span class="">2.</span>
+								<a href="https://mozilladevelopers.github.io/playground/css-grid/02-first-grid/">Mozila palyground</a>
+							</p>
+							<p class="">
+								<span class="">3.</span>
+								<a href="https://gridbyexample.com">Grid by example by @RachelAndrew</a>
+							</p>
+							<p class="">
+								<span class="">4.</span>
+								<a href="mailto: Maxim.Milovanov@novartis.com">Maxim.Milovanov@novartis.com</a>
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="slide-0">
+				<div class="slide-0__content">
+					<div class="grid">
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+
+						<div class="slide-0__wrapper">
+							<h4>Thank you
+								<span class="heighlight-e-blue">!</span>
+								</h1>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 12 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<section class="slide-0">
+				<div class="slide-0__content">
+					<div class="grid">
+						<div class="cell tall"></div>
+						<div class="cell wide"></div>
+						<div class="cell wide"></div>
+						<div class="cell tall"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+						<div class="cell"></div>
+						<div class="cell"></div>
+						<div class="cell wide"></div>
+
+						<div class="slide-0__wrapper">
+							<h4>questions
+								<span class="heighlight-e-blue">?</span>
+								</h1>
+						</div>
+
+					</div>
+				</div>
+			</section>
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 13 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 14 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 15 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 16 ****************************** -->
+			<!-- ********************************************************************* -->
+
+			<!-- ********************************************************************* -->
+			<!-- ***************************** slide 17 ****************************** -->
+			<!-- ********************************************************************* -->
+
+
+			</div>
+			</div>
+
+			<script src="lib/js/head.min.js"></script>
+			<script src="js/reveal.js"></script>
+
+			<script>
+				// More info about config & dependencies:
+				// - https://github.com/hakimel/reveal.js#configuration
+				// - https://github.com/hakimel/reveal.js#dependencies
+				Reveal.initialize({
+					slideNumber: true,
+					dependencies: [
+						{ src: 'plugin/markdown/marked.js' },
+						{ src: 'plugin/markdown/markdown.js' },
+						{ src: 'plugin/notes/notes.js', async: true },
+						{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } },
+					]
+				});
+			</script>
+</body>
+
+</html>
